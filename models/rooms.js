@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   rooms.init({
     room_name: DataTypes.STRING,
-    number_of_round: DataTypes.INTEGER
+    number_of_round: DataTypes.INTEGER,
+    creator_user_id: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'rooms',
