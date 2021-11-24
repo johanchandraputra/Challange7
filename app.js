@@ -3,10 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// const passport = require("./lib/passport");
+require('dotenv').config();
+const passport = require("./lib/passport");
+
+
 
 const routers = require('./routes');
-// var usersRouter = require('./routes/users');
+
 
 const app = express();
 
@@ -16,13 +19,13 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-// app.use(passport.initialize());
+app.use(passport.initialize());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routers);
-// app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

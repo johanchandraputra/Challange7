@@ -3,13 +3,10 @@ var express = require('express');
 const router = express.Router();
 
 const registrationRoute = require("./registration.route");
+const loginRoute = require("./login.route");
 
 router.use("/register", registrationRoute);
+router.use("/login", loginRoute);
 
-
-// * GET home page. */
-//  router.get('/', function(req, res, next) {
-//    res.render('index', { title: 'Express' });
-// });
 
 module.exports = router;

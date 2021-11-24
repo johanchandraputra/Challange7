@@ -4,20 +4,23 @@
     "password": "postgres",
     "database": "database_game_rps",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "port":"5433"
   },
   "test": {
     "username": "postgres",
     "password": "postgres",
     "database": "database_game_rps",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "port":"5433"
   },
   "production": {
     "username": "postgres",
     "password": "postgres",
     "database": "database_game_rps",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "port":"5433"
   }
 }
