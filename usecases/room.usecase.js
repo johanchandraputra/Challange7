@@ -70,10 +70,6 @@ const createRoom = (
       });
     }).then(function (result){
       resolve(result)
-      console.log(room_name);
-      console.log(number_of_round);
-      console.log(creator_user_id);
-
     }).catch(function(err)
     {
       reject(err);
